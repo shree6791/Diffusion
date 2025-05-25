@@ -23,49 +23,49 @@ def get_controlnet_pipeline(model_name):
 detectors = {
     "OpenPose": (
         OpenposeDetector.from_pretrained("lllyasviel/Annotators"),
-        "openpose.jpg",
+        "input/openpose.jpg",
         "lllyasviel/sd-controlnet-openpose",
         "a robot meditating like a monk",
         "Extracts human body keypoints for pose control"
     ),
     "Depth": (
         MidasDetector.from_pretrained("lllyasviel/Annotators"),
-        "depth.jpg",
+        "input/depth.jpg",
         "lllyasviel/sd-controlnet-depth",
         "a futuristic city overgrown with vines",
         "Estimates per-pixel depth for 3D-aware draping"
     ),
     "Canny": (
         CannyDetector(),
-        "canny.jpg",
+        "input/canny.jpg",
         "lllyasviel/control_v11p_sd15_canny",
         "a sci-fi throne made of crystal and steel",
         "Detects image edges for sharp structural guidance"
     ),
     "Scribble": (
         HEDdetector.from_pretrained("lllyasviel/Annotators"),
-        "scribble.jpg",
+        "input/scribble.jpg",
         "lllyasviel/control_v11p_sd15_scribble",
         "a Disney-style bunny king",
         "Extracts contour/scribble lines for freeform edits"
     ),
     "MLSD": (
         MLSDdetector.from_pretrained("lllyasviel/Annotators"),
-        "mlsd.jpg",
+        "input/mlsd.jpg",
         "lllyasviel/sd-controlnet-mlsd",
         "blueprints of a futuristic spacecraft",
         "Extracts line segments for technical detailing"
     ),
     "Segmentation": (
         SamDetector.from_pretrained("ybelkada/segment-anything", subfolder="checkpoints"),
-        "segmentation.jpg",
+        "input/segmentation.jpg",
         "lllyasviel/control_v11p_sd15_seg",
         "a floating village with glowing trees",
         "Generates semantic masks to isolate garments"
     ),
     "NormalMap": (
         NormalBaeDetector.from_pretrained("lllyasviel/Annotators"),
-        "normal_map.jpg",
+        "input/normal_map.jpg",
         "lllyasviel/sd-controlnet-normal",
         "an ancient temple carved into a mountain",
         "Computes surface normals for texture wrapping"
@@ -79,14 +79,14 @@ detectors = {
     ),
     "Tile": (
         None,
-        "tile.jpg",
+        "input/tile.jpg",
         "lllyasviel/control_v11f1e_sd15_tile",
         "a geometric tileable wallpaper",
         "Uses img2img for seamless, repeatable patterns"
     ),
     "QRCode": (
         None,
-        "qr_code.jpg",
+        "input/qr_code.jpg",
         "monster-labs/control_v1p_sd15_qrcode_monster",
         "a cyberpunk poster with a QR code",
         "Conditions on QR codes for functional art generation"
@@ -136,7 +136,7 @@ for category, (orig, proc, description) in results.items():
             spine.set_linewidth(1)
 
     # Save image
-    fig.savefig(f"{category}_comparison.png", dpi=300, bbox_inches="tight")
+    fig.savefig(f"output/{category}_comparison.jpg", dpi=300, bbox_inches="tight")
 
     # leave room at top for the title texts
     plt.tight_layout(rect=[0, 0, 1, 0.88])
