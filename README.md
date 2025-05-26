@@ -16,10 +16,9 @@
 
 # Clone the official IP-Adapter repository
 !git clone https://github.com/tencent-ailab/IP-Adapter.git
-```shell
+```
 
-
-Install the IP-Adapter Python Package
+##### Install the IP-Adapter Python Package
 
 ```shell
 # Enter the cloned directory
@@ -55,9 +54,7 @@ This will install:
 ```
 
 Now you have:
-
 - models/ with SD1.5 adapter weights + image encoder.
-
 - sdxl_models/ with SDXL adapter weights + image encoder.
 
 
