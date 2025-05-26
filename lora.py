@@ -27,7 +27,7 @@
     opencv-python \
     safetensors
 
-!python train_lora.py \
+!python helper/train_lora.py \
   --pretrained_model_name_or_path="runwayml/stable-diffusion-v1-5" \
   --instance_data_dir="./training_images" \
   --output_dir="./lora_sks_person" \
@@ -38,4 +38,4 @@
   --train_batch_size=1 \
   --max_train_steps=400
 
-!python use_lora.py
+!python helper/use_lora.py

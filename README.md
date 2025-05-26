@@ -1,5 +1,4 @@
 ### Prerequisites
-
 - GPU-enabled environment (e.g., Google Colab, Kaggle) with CUDA support.
 - Git LFS installed for handling large model checkpoints.
 - Python 3.8+.IP Adapter
@@ -12,7 +11,8 @@
 # Ensure we start in /content (Colab default)
 %cd /content
 
-# Remove any previous clones\!rm -rf IP-Adapter
+# Remove any previous clones\
+!rm -rf IP-Adapter
 
 # Clone the official IP-Adapter repository
 !git clone https://github.com/tencent-ailab/IP-Adapter.git
@@ -61,6 +61,5 @@ Now you have:
 
 
 ### References
-
 - IP-Adapter GitHub: https://github.com/tencent-ailab/IP-Adapter
 - HF Weights Repo: https://huggingface.co/h94/IP-Adapter
