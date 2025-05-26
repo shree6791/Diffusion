@@ -15,7 +15,7 @@ pipe = StableDiffusionPipeline.from_pretrained(
 pipe.scheduler.set_timesteps(num_inference_steps=50)
 
 # ✅ Prompt + CFG setup
-prompt = "a fox astronaut in a neon forest"
+prompt = "a fox in a neon forest"
 guidance_scale = 7.5
 
 # ✅ Encode prompt (conditional)
