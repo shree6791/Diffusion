@@ -34,15 +34,7 @@
 This will install:
 - ip-adapter package and the inference entrypoint.
 - All demo dependencies: diffusers, transformers, opencv-python, gradio, safetensors, etc.
--   !pip install \
-    diffusers==0.22.1 \
-    huggingface_hub==0.15.0 \
-    accelerate==0.21.0 \
-    transformers==4.25.1 \
-    opencv-python \
-    safetensors \
-    --no-deps
-
+    - pip install -r requirements.txt 
 
 ##### Download Model Weights
 
