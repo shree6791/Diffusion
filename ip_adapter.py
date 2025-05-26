@@ -30,7 +30,7 @@ def image_grid(imgs, rows, cols, pad=2):
     return grid
 
 # 4) Generate styled variations
-ref = Image.open("common_man.jpeg").convert("RGB").resize((512, 512))
+ref = Image.open("images/input/common_man.jpeg").convert("RGB").resize((512, 512))
 images = ip_adapter.generate(
     pil_image=ref,
     prompt="a superhero flying through the sky",
@@ -42,7 +42,7 @@ images = ip_adapter.generate(
 
 # 5) Create and save the grid
 grid = image_grid(images, rows=1, cols=4)
-grid.save("common_man_variation_grid.jpg", quality=90)
+grid.save("images/ouptut/common_man_variation_grid.jpg", quality=90)
 
 # Display inline
 display(grid)

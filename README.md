@@ -1,12 +1,12 @@
-Prerequisites
+### Prerequisites
 
 - GPU-enabled environment (e.g., Google Colab, Kaggle) with CUDA support.
 - Git LFS installed for handling large model checkpoints.
 - Python 3.8+.IP Adapter
 
-Setup
+### Setup
 
-1. Clone the IP-Adapter Code
+##### 1. Clone the IP-Adapter Code
 
 ```shell
 # Ensure we start in /content (Colab default)
@@ -18,7 +18,8 @@ Setup
 !git clone https://github.com/tencent-ailab/IP-Adapter.git
 ```shell
 
-2. Install the IP-Adapter Python Package
+
+Install the IP-Adapter Python Package
 
 ```shell
 # Enter the cloned directory
@@ -32,13 +33,11 @@ Setup
 ```
 
 This will install:
-
-ip-adapter package and the inference entrypoint.
-
-All demo dependencies: diffusers, transformers, opencv-python, gradio, safetensors, etc.
+- ip-adapter package and the inference entrypoint.
+- All demo dependencies: diffusers, transformers, opencv-python, gradio, safetensors, etc.
 
 
-3. Download Model Weights
+##### Download Model Weights
 
 ```shell
 # Remove any stale folders\!rm -rf models sdxl_models IP-Adapter-models
@@ -60,3 +59,9 @@ Now you have:
 - models/ with SD1.5 adapter weights + image encoder.
 
 - sdxl_models/ with SDXL adapter weights + image encoder.
+
+
+### References
+
+- IP-Adapter GitHub: https://github.com/tencent-ailab/IP-Adapter
+- HF Weights Repo: https://huggingface.co/h94/IP-Adapter
