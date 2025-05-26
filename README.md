@@ -56,6 +56,8 @@ This will install:
 Now you have:
 - models/ with SD1.5 adapter weights + image encoder.
 - sdxl_models/ with SDXL adapter weights + image encoder.
+- <img width="232" alt="image" src="https://github.com/user-attachments/assets/71503f86-1ed8-4b4a-b712-44b5e071833f" />
+
 
 
 ### References
