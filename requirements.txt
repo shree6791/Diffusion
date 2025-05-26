@@ -1,0 +1,12 @@
+diffusers==0.22.1
+huggingface_hub==0.15.0
+accelerate==0.21.0
+transformers==4.25.1
+opencv-python
+safetensors
+torch
+torchvision
+datasets
+pillow
+peft
+bitsandbytes
